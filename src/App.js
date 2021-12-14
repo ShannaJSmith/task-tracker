@@ -1,4 +1,5 @@
-import './App.css';
+// import './App.css';
+import './index.css';
 import Header from './components/Header';
 
 const App = () => {
@@ -7,6 +8,6 @@ const App = () => {
       <Header />
     </div>
   );
-}
+};
 
 export default App;
