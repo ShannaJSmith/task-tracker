@@ -80,6 +80,7 @@ body {
 
 .form-control {
   margin: 20px 0;
+  /* background-color: transparent; */
 }
 
 .form-control label {

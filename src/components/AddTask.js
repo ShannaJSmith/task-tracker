@@ -1,16 +1,19 @@
 import PropTypes from 'prop-types';
+import Alert from './Alert';
 import { useState } from 'react';
 
 const AddTask = ({ onAdd }) => {
   const [text, setText] = useState('');
   const [day, setDay] = useState('');
   const [reminder, setReminder] = useState(false);
+  const [alert, setAlert] = useState(false);
 
   const onSubmit = (event) => {
     event.preventDefault();
     // if nothing is inputted give an alert
     if (!text) {
-      alert('Please add a task');
+      // alert('Please add a task');
+      setAlert(true);
       return;
     }
     // if input is present, add it. Then reset/clear the form
@@ -22,7 +25,7 @@ const AddTask = ({ onAdd }) => {
 
   return (
     <form className="add-form" onSubmit={onSubmit}>
-      <div className="form-control">
+      <div className="form">
         <label> Task </label>
         <input
           type="text"
@@ -31,7 +34,7 @@ const AddTask = ({ onAdd }) => {
           onChange={(event) => setText(event.target.value)}
         />
       </div>
-      <div className="form-control">
+      <div className="form">
         <label> Day & Time </label>
         <input
           type="text"
@@ -40,7 +43,7 @@ const AddTask = ({ onAdd }) => {
           onChange={(event) => setDay(event.target.value)}
         />
       </div>
-      <div className="form-control form-control-check">
+      <div className="form form-control-check">
         <label> Set Reminder </label>
         <input
           type="checkbox"
@@ -49,6 +52,7 @@ const AddTask = ({ onAdd }) => {
           onChange={(event) => setReminder(event.currentTarget.checked)}
         />
       </div>
+      {alert && <Alert />}
       <input className="btn btn-block" type="submit" value="Save" />
     </form>
   );
