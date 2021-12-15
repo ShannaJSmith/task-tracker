@@ -10,7 +10,6 @@ const Header = ({ title }) => {
     <header className="header">
       <h1>{title}</h1>
       <Button text="Add" color="hotpink" onClick={onClick} />
-      <Button text="Delete" color="maroon" onClick={onClick} />
     </header>
   );
 };
