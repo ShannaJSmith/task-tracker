@@ -9,6 +9,7 @@
 body {
   font-family: 'Lora', serif;
   background-color: rgb(6, 6, 56);
+  color: white;
 }
 
 .container {
@@ -31,7 +32,7 @@ body {
 
 .btn {
   display: inline-block;
-  background: #000;
+  background: rgb(12, 163, 233);
   color: #fff;
   border: none;
   padding: 10px 20px;
