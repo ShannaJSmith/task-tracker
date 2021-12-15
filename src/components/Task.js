@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { FaTimes } from 'react-icons/fa';
 
 const Task = ({ task, onDelete }) => {
@@ -15,6 +16,11 @@ const Task = ({ task, onDelete }) => {
       <p>{task.day}</p>
     </div>
   );
+};
+
+Task.propTypes = {
+  task: PropTypes.string,
+  onDelete: PropTypes.function
 };
 
 export default Task;
