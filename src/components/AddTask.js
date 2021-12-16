@@ -25,7 +25,7 @@ const AddTask = ({ onAdd }) => {
 
   return (
     <form className="add-form" onSubmit={onSubmit}>
-      <div className="form">
+      <div className="form-control">
         <label> Task </label>
         <input
           type="text"
@@ -34,7 +34,7 @@ const AddTask = ({ onAdd }) => {
           onChange={(event) => setText(event.target.value)}
         />
       </div>
-      <div className="form">
+      <div className="form-control">
         <label> Day & Time </label>
         <input
           type="text"
@@ -43,7 +43,7 @@ const AddTask = ({ onAdd }) => {
           onChange={(event) => setDay(event.target.value)}
         />
       </div>
-      <div className="form form-control-check">
+      <div className="form-control form-control-check">
         <label> Set Reminder </label>
         <input
           type="checkbox"
