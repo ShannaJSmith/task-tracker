@@ -1,12 +1,12 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
-type Props = {
-  color: string,
-  text: string,
-  onClick: () => void
+interface Props {
+  color: string;
+  text: string;
+  onClick: () => void;
 }
 
-const Button = ({ color, text, onClick }: Props) => {
+const Button: React.FC<Props> = ({ color, text, onClick }) => {
   return (
     <button style={{ backgroundColor: color }} className="btn" onClick={onClick}>
       {text}
@@ -14,10 +14,10 @@ const Button = ({ color, text, onClick }: Props) => {
   );
 };
 
-Button.propTypes = {
-  color: PropTypes.string,
-  text: PropTypes.string,
-  onClick: PropTypes.func
-};
+// Button.propTypes = {
+//   color: PropTypes.string,
+//   text: PropTypes.string,
+//   onClick: PropTypes.func
+// };
 
 export default Button;
