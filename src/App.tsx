@@ -4,9 +4,16 @@ import Header from './components/Header';
 import Tasks from './components/Tasks';
 import AddTask from './components/AddTask';
 
-const App = () => {
+interface Task {
+  id: number;
+  text: string;
+  day: string;
+  reminder: boolean;
+}
+
+const App: React.FC = () => {
   const [showAddTask, setShowAddTask] = useState(false);
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState<Task[]>([]);
 
   useEffect(() => {
     const getTasks = async () => {
