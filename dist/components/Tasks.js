@@ -16,3 +16,4 @@ Tasks.propTypes = {
     reminder: prop_types_1.default.func
 };
 exports.default = Tasks;
+ƒ
