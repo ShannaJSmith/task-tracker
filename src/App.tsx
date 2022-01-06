@@ -77,7 +77,7 @@ const App: React.FC = () => {
 
   return (
     <div className="container">
-      <Header onAdd={() => setShowAddTask(!showAddTask)} showAddTask={showAddTask} />
+      <Header title='Task Tracker' onAdd={() => setShowAddTask(!showAddTask)} showAddTask={showAddTask} />
       {showAddTask && <AddTask onAdd={addTask} />}
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={deleteTask} reminder={reminder} />

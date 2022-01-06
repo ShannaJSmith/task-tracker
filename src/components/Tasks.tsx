@@ -1,5 +1,11 @@
 import Task from './Task';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
+
+// interface Props {
+//   tasks: {};
+//   onDelete: () => void;
+//   reminder: boolean;
+// }
 
 const Tasks = ({ tasks, onDelete, reminder }) => {
   return (
@@ -11,10 +17,10 @@ const Tasks = ({ tasks, onDelete, reminder }) => {
   );
 };
 
-Tasks.propTypes = {
-  tasks: PropTypes.array,
-  onDelete: PropTypes.func,
-  reminder: PropTypes.func
-};
+// Tasks.propTypes = {
+//   tasks: PropTypes.array,
+//   onDelete: PropTypes.func,
+//   reminder: PropTypes.func
+// };
 
 export default Tasks;

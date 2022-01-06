@@ -1,7 +1,13 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Button from './Button';
 
-const Header = ({ title, onAdd, showAddTask }) => {
+interface Props {
+  title: string;
+  onAdd: () => void;
+  showAddTask: boolean;
+}
+
+const Header: React.FC<Props> = ({ title, onAdd, showAddTask }) => {
   return (
     <header className="header">
       <h1>{title}</h1>
@@ -14,14 +20,14 @@ const Header = ({ title, onAdd, showAddTask }) => {
   );
 };
 
-Header.defaultProps = {
-  title: 'Task Tracker'
-};
+// Header.defaultProps = {
+//   title: 'Task Tracker'
+// };
 
-Header.propTypes = {
-  title: PropTypes.string.isRequired,
-  onAdd: PropTypes.func,
-  showAddTask: PropTypes.bool
-};
+// Header.propTypes = {
+//   title: PropTypes.string.isRequired,
+//   onAdd: PropTypes.func,
+//   showAddTask: PropTypes.bool
+// };
 
 export default Header;
